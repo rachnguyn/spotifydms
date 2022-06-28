@@ -11,10 +11,6 @@ export default function Home() {
     setList(items);
   };
 
-  const idk = () => {
-    console.log("hello")
-  }
-
   if (session) {
     return (
       <>
