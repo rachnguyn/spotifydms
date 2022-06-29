@@ -33,7 +33,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 10px;
     transition: all 1s;
     border: 1px solid rgb(31, 31, 31);
     /* -webkit-box-shadow: -1px 3px 11px 1px rgba(0,0,0,0.65); 
@@ -91,6 +91,7 @@ box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
     display: grid;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .texts {
@@ -314,4 +315,36 @@ box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
     border-radius: 10px;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
+}
+
+.edit{
+    text-transform: none;
+    font-size: 13px;
+    color: rgb(64, 131, 255);
+    position: relative;
+    left: -72px;
+}
+
+
+.editicon{
+    text-transform: none;
+    font-size: 15px;
+    color: rgb(64, 131, 255);
+    position: relative;
+    left: 72px;
+    top: 3px;
+}
+
+.topartistname{
+    color: #8c8c8c;
+    text-transform: none;
+    position: relative;
+    top: 23px;
+    font-size: 13px; 
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 10px;
+    margin-left: 10px
 }

@@ -5,6 +5,8 @@ import Head from 'next/head';
 import { BiSearch } from 'react-icons/bi';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
+import { RiEditBoxLine } from 'react-icons/ri';
+
 import { Button, Text } from '@nextui-org/react';
 import { motion } from "framer-motion"
 import { style } from 'dom-helpers';
@@ -71,7 +73,8 @@ export default function Home() {
     "Your new book... it was SO good",
     "Wyd, " + profile.display_name + "?",
     "Snap?",
-    "Sorry... u were right"
+    "Sorry... U were right",
+    "LOL u crack me up"
   ]
 
   const randomTextsNoRepeats = (array) => {
@@ -175,7 +178,11 @@ export default function Home() {
            </div>
         {/* text messages from top artists */}
         <div className={styles.phone} style={{display: phoneIsVisible ? 'flex' : 'none'}}>
-          <div className={styles.messages}>Messages</div>
+          <div>
+            <span className={styles.edit}>Edit</span>
+            <span className={styles.messages}>Messages</span>
+            <span className={styles.editicon}><RiEditBoxLine></RiEditBoxLine></span>
+          </div>
           <div className={styles.searchbar}>
             <div style={{position: 'relative', top: 2, left: -4}}><BiSearch/></div>
             Search
@@ -183,7 +190,7 @@ export default function Home() {
           </div>
           <div className={styles.topartist}>
             <img className={styles.number1artist}src={topArtists[0]?.image}/>
-            <text style={{color: '#8c8c8c', textTransform: 'none', position: 'relative', top: 23, fontSize: 13, fontWeight: 400, fontFamily: 'Roboto'}}>{topArtists[0]?.name}</text>
+            <div className={styles.topartistname}>{topArtists[0]?.name}</div>
           </div>
 
           <div className={styles.texts}>
