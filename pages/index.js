@@ -69,6 +69,8 @@ export default function Home() {
     "CONGRATS 🎉 on the Nobel!",
     "Your new book... it was SO good",
     "Wyd, " + profile.display_name + "?",
+    "Snap?",
+    "Sorry... u were right"
   ]
 
   const randomTextsNoRepeats = (array) => {
@@ -152,7 +154,7 @@ export default function Home() {
     borderRadius: 15,
     webkitBoxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
 boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
-  }}><Button color="error" auto onClick={() => signOut()}>Sign Out</Button></div></motion.button>
+  }}><Button color="warning" auto ghost onClick={() => signOut()}>Sign Out</Button></div></motion.button>
           
           <motion.button
     whileHover={{ scale: 1.1 }}
@@ -168,7 +170,7 @@ boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
     webkitBoxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
 boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
   }}>
-          <Button color="gradient" auto onClick={() => getArtists()}>Check DMs</Button></div></motion.button>
+          <Button color="success" auto ghost onClick={() => getArtists()}>Check DMs</Button></div></motion.button>
 
 
           </div>
@@ -190,83 +192,77 @@ boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
           </div>
           <div className={styles.topartist}>
             <img className={styles.number1artist}src={topArtists[0]?.image}/>
-            <text style={{color: '#8c8c8c',     textTransform: 'none', position: 'relative', top: 23, fontSize: 13, fontWeight: 400, fontFamily: 'Roboto'}}>{topArtists[0]?.name}</text>
+            <text style={{color: '#8c8c8c', textTransform: 'none', position: 'relative', top: 23, fontSize: 13, fontWeight: 400, fontFamily: 'Roboto'}}>{topArtists[0]?.name}</text>
           </div>
+
           <div className={styles.texts}>
               <div className={styles.artist}>
-              <div className={styles.bluedot} ></div>
-              <img className={styles.artistimage} src={topArtists[1]?.image}/>
-                <text style={{fontSize: 13, position: 'relative', left: 60, top: -42, fontWeight: 300, fontFamily: 'Roboto'}}>{topArtists[1]?.name}</text>
-                <text style={{fontSize: 11, position: 'relative', right: -195, top: -62, fontWeight: 300, fontFamily: 'Roboto', color: '#8c8c8c'}}>7:{(topArtists[1]?.popularity)%60 < 10 ? '0' + (topArtists[1]?.popularity)%60 : (topArtists[1]?.popularity)%60} PM</text> 
-                <div style={{fontSize: 11, position: 'relative', right: -240, top: -76, color: 'grey'}}><IoIosArrowForward/></div>
-                <text style={{ lineHeight: '100%',fontSize: 11, position: 'relative', left: 60, top: -75, fontWeight: 400, fontFamily: 'Roboto', color: '#8c8c8c', marginRight: 70}}>
-                  {chooseText()}
-                </text>
-                <div className={styles.line} style={{top: 10}}></div>
+                <div className={styles.bluedot} ></div>
+                <img className={styles.artistimage} src={topArtists[1]?.image}/>
+                <div style={{marginBottom: 2}}>
+                   <span className={styles.artistname}>{topArtists[1]?.name}</span>
+                   <span className={styles.arrow}><IoIosArrowForward/></span>
+                   <span className={styles.time}>7:{(topArtists[1]?.popularity)%60 < 10 ? '0' + (topArtists[1]?.popularity)%60 : (topArtists[1]?.popularity)%60} PM</span>
+                </div>
+                <div className={styles.txtmsg}>{chooseText()}</div>
+                <div className={styles.line} style={{top: 8}}></div>
 
               </div>
 
               <div className={styles.artist}>
               <div className={styles.bluedot2} ></div>
-
-              <img className={styles.artistimage} src={topArtists[2]?.image}/>
-                <text style={{fontSize: 13, position: 'relative', left: 60, top: -42, fontWeight: 300, fontFamily: 'Roboto'}}>{topArtists[2]?.name}</text>
-                <text style={{fontSize: 11, position: 'relative', right: -195, top: -62, fontWeight: 300, fontFamily: 'Roboto', color: '#8c8c8c'}}>6:{(topArtists[2]?.popularity)%60 < 10 ? '0' + (topArtists[2]?.popularity)%60 : (topArtists[2]?.popularity)%60} PM</text>
-                <div style={{fontSize: 11, position: 'relative', right: -240, top: -76, color: 'grey'}}><IoIosArrowForward/></div>
-                <text style={{ lineHeight: '100%',fontSize: 11, position: 'relative', left: 60, top: -75, fontWeight: 400, fontFamily: 'Roboto', color: '#8c8c8c', marginRight: 50}}>
-                {chooseText()}
-                </text>
+                <img className={styles.artistimage} src={topArtists[2]?.image}/>
+                <div style={{marginBottom: 2}}>
+                   <span className={styles.artistname}>{topArtists[2]?.name}</span>
+                   <span className={styles.arrow}><IoIosArrowForward/></span>
+                   <span className={styles.time}>6:{(topArtists[2]?.popularity)%60 < 10 ? '0' + (topArtists[2]?.popularity)%60 : (topArtists[2]?.popularity)%60} PM</span>
+                </div>
+                <div className={styles.txtmsg}>{chooseText()}</div>
                 <div className={styles.line} style={{top: 70}}></div>
-
               </div>
 
               <div className={styles.artist}>
-              <img className={styles.artistimage} src={topArtists[3]?.image}/>
-                <text style={{fontSize: 13, position: 'relative', left: 60, top: -42, fontWeight: 300, fontFamily: 'Roboto'}}>{topArtists[3]?.name}</text>
-                <text style={{fontSize: 11, position: 'relative', right: -195, top: -62, fontWeight: 300, fontFamily: 'Roboto', color: '#8c8c8c'}}>4:{((topArtists[3]?.popularity)%60) < 10 ? '0' + (topArtists[3]?.popularity)%60 : (topArtists[3]?.popularity)%60} PM</text>
-                <div style={{fontSize: 11, position: 'relative', right: -240, top: -76, color: 'grey'}}><IoIosArrowForward/></div>
-                <text style={{ lineHeight: '100%',fontSize: 11, position: 'relative', left: 60, top: -75, fontWeight: 400, fontFamily: 'Roboto', color: '#8c8c8c', marginRight: 70}}>
-                  {randomTexts[2]}
-                </text>
+                <img className={styles.artistimage} src={topArtists[3]?.image}/>
+                <div style={{marginBottom: 2}}>
+                   <span className={styles.artistname}>{topArtists[3]?.name}</span>
+                   <span className={styles.arrow}><IoIosArrowForward/></span>
+                   <span className={styles.time}>4:{(topArtists[3]?.popularity)%60 < 10 ? '0' + (topArtists[3]?.popularity)%60 : (topArtists[3]?.popularity)%60} PM</span>
+                </div>
+                <div className={styles.txtmsg}>{chooseText()}</div>
                 <div className={styles.line} style={{top: 130}}></div>
-
               </div>
 
               <div className={styles.artist}>
-              <div className={styles.bluedot3} ></div>
-
-              <img className={styles.artistimage} src={topArtists[4]?.image}/>
-                <text style={{fontSize: 13, position: 'relative', left: 60, top: -42, fontWeight: 300, fontFamily: 'Roboto'}}>{topArtists[4]?.name}</text>
-                <text style={{fontSize: 11, position: 'relative', right: -195, top: -62, fontWeight: 300, fontFamily: 'Roboto', color: '#8c8c8c'}}>1:{((topArtists[4]?.popularity)%60) < 10 ? '0' + (topArtists[4]?.popularity)%60 : (topArtists[4]?.popularity)%60} PM</text>
-                <div style={{fontSize: 11, position: 'relative', right: -240, top: -76, color: 'grey'}}><IoIosArrowForward/></div>
-                <text style={{    lineHeight: '100%',
-fontSize: 11, position: 'relative', left: 60, top: -75, fontWeight: 400, fontFamily: 'Roboto', color: '#8c8c8c', marginRight: 70}}>
-                {chooseText()}
-                </text>
-                <div className={styles.line} style={{top: 190}}></div>
-
+                  <div className={styles.bluedot3} ></div>
+                  <img className={styles.artistimage} src={topArtists[4]?.image}/>
+                  <div style={{marginBottom: 2}}>
+                    <span className={styles.artistname}>{topArtists[4]?.name}</span>
+                    <span className={styles.arrow}><IoIosArrowForward/></span>
+                    <span className={styles.time}>1:{(topArtists[4]?.popularity)%60 < 10 ? '0' + (topArtists[4]?.popularity)%60 : (topArtists[4]?.popularity)%60} PM</span>
+                  </div>
+                  <div className={styles.txtmsg}>{chooseText()}</div>
+                  <div className={styles.line} style={{top: 190}}></div>
               </div>
 
               <div className={styles.artist}>
-              <img className={styles.artistimage} src={topArtists[5]?.image}/>
-                <text style={{fontSize: 13, position: 'relative', left: 60, top: -42, fontWeight: 300, fontFamily: 'Roboto'}}>{topArtists[5]?.name}</text>
-                <text style={{fontSize: 11, position: 'relative', right: -190, top: -62, fontWeight: 300, fontFamily: 'Roboto', color: '#8c8c8c'}}>11:{((topArtists[5]?.popularity)%60) < 10 ? '0' + (topArtists[5]?.popularity)%60 : (topArtists[5]?.popularity)%60} AM</text>
-                <div style={{fontSize: 11, position: 'relative', right: -240, top: -76, color: 'grey'}}><IoIosArrowForward/></div>
-                <text style={{ lineHeight: '100%',fontSize: 11, position: 'relative', left: 60, top: -75, fontWeight: 400, fontFamily: 'Roboto', color: '#8c8c8c', marginRight: 70}}>
-                {chooseText()}
-                </text>
-                <div className={styles.line} style={{top: 250}}></div>
-
+                  <img className={styles.artistimage} src={topArtists[5]?.image}/>
+                  <div style={{marginBottom: 2}}>
+                    <span className={styles.artistname}>{topArtists[5]?.name}</span>
+                    <span className={styles.arrow}><IoIosArrowForward/></span>
+                    <span className={styles.time}>11:{(topArtists[5]?.popularity)%60 < 10 ? '0' + (topArtists[5]?.popularity)%60 : (topArtists[5]?.popularity)%60} AM</span>
+                  </div>
+                  <div className={styles.txtmsg}>{chooseText()}</div>
+                  <div className={styles.line} style={{top: 252}}></div>
               </div>
 
               <div className={styles.artist}>
-              <img className={styles.artistimage} src={topArtists[6]?.image}/>
-                <text style={{fontSize: 13, position: 'relative', left: 60, top: -42, fontWeight: 300, fontFamily: 'Roboto'}}>{topArtists[6]?.name}</text>
-                <text style={{fontSize: 11, position: 'relative', right: -195, top: -62, fontWeight: 300, fontFamily: 'Roboto', color: '#8c8c8c'}}>9:{((topArtists[6]?.popularity)%60) < 10 ? '0' + (topArtists[6]?.popularity)%60 : (topArtists[6]?.popularity)%60} AM</text>
-                <div style={{fontSize: 11, position: 'relative', right: -240, top: -76, color: 'grey'}}><IoIosArrowForward/></div>
-                <text style={{ lineHeight: '100%',fontSize: 11, position: 'relative', left: 60, top: -75, fontWeight: 400, fontFamily: 'Roboto', color: '#8c8c8c', marginRight: 70}}>
-                {chooseText()}
-                </text>
+                  <img className={styles.artistimage} src={topArtists[6]?.image}/>
+                  <div style={{marginBottom: 2}}>
+                    <span className={styles.artistname}>{topArtists[6]?.name}</span>
+                    <span className={styles.arrow}><IoIosArrowForward/></span>
+                    <span className={styles.time}>9:{(topArtists[6]?.popularity)%60 < 10 ? '0' + (topArtists[6]?.popularity)%60 : (topArtists[6]?.popularity)%60} AM</span>
+                  </div>
+                  <div className={styles.txtmsg}>{chooseText()}</div>
               </div>
           </div>
 
