@@ -3,13 +3,34 @@ import Image from 'next/image'
 import Header from '../../components/header'
 import styles from '../../styles/Signin.module.css'
 import { Button, Text } from '@nextui-org/react';
+import { motion } from "framer-motion"
 
 const Signin = ({ csrfToken, providers }) => {
   return (
     <div style={{ overflow: 'hidden', position: 'relative' }}>
       <div className={styles.content}>
         <div className={styles.cardWrapper}>
-          <Image src='/spotify.png' width="196px" height="196px" alt='App Logo' style={{ height: '85px', marginBottom: '20px' }} />
+                    <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.9 }}
+    style={{
+      backgroundColor: 'transparent',
+      padding: 0,
+      borderRadius: 15,
+      border: 'none'
+    }}
+  ><Image src='/spotify.png' width="196px" height="196px" alt='App Logo' style={{ height: '85px', marginBottom: '20px' }} />
+          </motion.button>
+          <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.9 }}
+    style={{
+      backgroundColor: 'transparent',
+      padding: 0,
+      borderRadius: 15,
+      border: 'none'
+    }}
+  >
           <div className={styles.cardContent}>
             {providers &&
               Object.values(providers).map(provider => (
@@ -28,7 +49,7 @@ const Signin = ({ csrfToken, providers }) => {
                   </button>
                 </div>
               ))}
-          </div>
+          </div></motion.button>
         </div>
       </div>
       {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -5,6 +5,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Buttons from '../components/login-btn';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from "framer-motion"
 
 import { Button, Text } from '@nextui-org/react';
 import { style } from 'dom-helpers';
@@ -23,7 +24,16 @@ export default function App({Component, pageProps: {session, ...pageProps}}) {
     <main className={styles.main}>
     <div 
     className={styles.titleforpage}>
-          <Text
+                    <motion.button
+    whileHover={{ scale: 1.03 }}
+    whileTap={{ scale: 0.9 }}
+    style={{
+      backgroundColor: 'transparent',
+      padding: 0,
+      borderRadius: 15,
+      border: 'none'
+    }}
+  ><Text
             h1
             size={50}
             css={{
@@ -31,7 +41,7 @@ export default function App({Component, pageProps: {session, ...pageProps}}) {
             }}
             weight="bold"
           >Spotify DMs
-          </Text></div>
+          </Text></motion.button></div>
         {/* <div className={styles.title}>Check your Spotify DMs</div> */}
     <SessionProvider session={session} >
 
