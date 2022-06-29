@@ -16,7 +16,7 @@ const Signin = ({ csrfToken, providers }) => {
             h1
             size={50}
             css={{
-              textGradient: "45deg, $green600 10%, $yellow600 100%",
+              textGradient: "25deg, #00ff5e 0%, #ffd000 90%",
             }}
             weight="bold"
           >Spotify DMs

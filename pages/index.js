@@ -90,8 +90,12 @@ export default function Home() {
   
   var chooseText = randomTextsNoRepeats(randomTexts);
 
+  useEffect(() => {
+    getArtists();
+  }, []);
 
   if (session) {
+
     return (
       <>
         <Head>
@@ -106,7 +110,7 @@ export default function Home() {
             h1
             size={50}
             css={{
-              textGradient: "45deg, $green600 10%, $yellow600 100%",
+              textGradient: "25deg, #00ff5e 0%, #ffd000 90%",
             }}
             weight="bold"
           >Spotify DMs
@@ -163,17 +167,17 @@ export default function Home() {
           <div className={styles.signedinas}>
             {/* buttons (sign out + check dms) */}
               <div className={styles.buttonwrapper}>
+              <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
+                  <div className={styles.buttonshadow}>
+                    <Button color="success" auto ghost onClick={() => getArtists()}>Refresh</Button>
+                    </div>
+                </motion.button>
                 <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
                   <div className={styles.buttonshadow}>
                     <Button color="warning" auto ghost onClick={() => signOut()}>Sign Out</Button>
                     </div>
                 </motion.button>
-                
-                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
-                  <div className={styles.buttonshadow}>
-                    <Button color="success" auto ghost onClick={() => getArtists()}>Check DMs</Button>
-                    </div>
-                </motion.button>
+              
               </div>
            </div>
         {/* text messages from top artists */}
@@ -288,7 +292,7 @@ export default function Home() {
             h1
             size={50}
             css={{
-              textGradient: "45deg, $green600 10%, $yellow600 100%",
+              textGradient: "25deg, #00ff5e 0%, #ffd000 90%",
             }}
             weight="bold"
           >Spotify DMs
@@ -296,7 +300,9 @@ export default function Home() {
         </motion.button>
       </div>
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
-        <button className={styles.signinbutton} onClick={() => signIn()}>sign in</button>
+        <button className={styles.signinbutton} onClick={() => signIn()}>Check Messages
+        <div className={styles.arrow2}><IoIosArrowForward/></div>
+        </button>
         </motion.button>
 
     </>
