@@ -14,7 +14,7 @@
 
   .titleforpage{
       position: absolute;
-      top: 9%;
+      top: 13.8%;
       overflow: hidden;
       text-align: center;
       padding: 5px;
@@ -25,7 +25,7 @@
   }
   
 .phone {
-    margin-top: 60px;
+    margin-top: 90px;
     background-color: black;
     height: 570px;
     width: 280px;
@@ -178,7 +178,8 @@ box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
 
 .signedinas{
     position: absolute;
-    top: 19%;
+    top: 24%;
+    margin-left: 20px;
     overflow: hidden;
     text-align: center;
     justify-content: center;
@@ -203,24 +204,6 @@ box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
     border-radius: 10px;
 }
 
-.appjs > button {
-    background-color:rgb(255, 255, 255);
-    border: 2px solid black;
-    display: flex;
-    width: 100%;
-    text-transform: lowercase;
-    opacity: 1;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
-}
 
 .nameandtime {
     display: inline-block;
@@ -272,4 +255,59 @@ box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
     word-wrap: break-word;
     width: 180px;
     background-color: rgb(0, 0, 0);
+}
+.buttonwrapper {
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 15px;
+    border: none;
+}
+
+.buttonshadow {
+    margin-right: 15px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
+}
+
+.titlewrapper {
+    padding: 5px;
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 15px;
+    border: none;
+}
+
+.signedinastext {
+    position: absolute;
+    float: left;
+    left: 10%;
+    top: 10%;
+}
+
+.signinbutton {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    display: flex;
+    width: 140px;
+    opacity: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 14px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
 }

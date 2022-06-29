@@ -4,33 +4,39 @@ import Header from '../../components/header'
 import styles from '../../styles/Signin.module.css'
 import { Button, Text } from '@nextui-org/react';
 import { motion } from "framer-motion"
+import styles2 from '../../styles/home.module.css'
 
 const Signin = ({ csrfToken, providers }) => {
   return (
+    <main>
+      {/* title */}
+      <div className={styles2.titleforpage} style={{position: 'relative', top: 5}}>
+        <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.9 }} className={styles2.titlewrapper}>
+          <Text
+            h1
+            size={50}
+            css={{
+              textGradient: "45deg, $green600 10%, $yellow600 100%",
+            }}
+            weight="bold"
+          >Spotify DMs
+          </Text>
+        </motion.button>
+      </div>
+
     <div style={{ overflow: 'hidden', position: 'relative' }}>
-      <div className={styles.content}>
+      <div className={styles.content} style={{position: 'relative', top: -30}}>
         <div className={styles.cardWrapper}>
-                    <motion.button
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.9 }}
-    style={{
-      backgroundColor: 'transparent',
-      padding: 0,
-      borderRadius: 15,
-      border: 'none'
-    }}
-  ><Image src='/spotify.png' width="196px" height="196px" alt='App Logo' style={{ height: '85px', marginBottom: '20px' }} />
-          </motion.button>
-          <motion.button
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.9 }}
-    style={{
-      backgroundColor: 'transparent',
-      padding: 0,
-      borderRadius: 15,
-      border: 'none'
-    }}
-  >
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          className={styles2.buttons}>
+          <Image src='/spotify.png' width="196px" height="196px" alt='App Logo' style={{ height: '85px', marginBottom: '20px' }}/>
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          className={styles2.buttons}>
           <div className={styles.cardContent}>
             {providers &&
               Object.values(providers).map(provider => (
@@ -54,6 +60,7 @@ const Signin = ({ csrfToken, providers }) => {
       </div>
       {/* eslint-disable-next-line @next/next/no-img-element */}
     </div>
+    </main>
   )
 }
 

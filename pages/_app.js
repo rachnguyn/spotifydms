@@ -22,26 +22,7 @@ export default function App({Component, pageProps: {session, ...pageProps}}) {
         </Head>
         
     <main className={styles.main}>
-    <div 
-    className={styles.titleforpage}>
-                    <motion.button
-    whileHover={{ scale: 1.03 }}
-    whileTap={{ scale: 0.9 }}
-    style={{
-      backgroundColor: 'transparent',
-      padding: 0,
-      borderRadius: 15,
-      border: 'none'
-    }}
-  ><Text
-            h1
-            size={50}
-            css={{
-              textGradient: "45deg, $green600 10%, $yellow600 100%",
-            }}
-            weight="bold"
-          >Spotify DMs
-          </Text></motion.button></div>
+
         {/* <div className={styles.title}>Check your Spotify DMs</div> */}
     <SessionProvider session={session} >
 

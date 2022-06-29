@@ -43,11 +43,13 @@
       left: -15px;
       position: relative;
     width: 100%;
-    border: 1.5px solid #1DB954;
+    border: 2px solid #1DB954;
     background: rgba(0, 0, 0, 0);
     border-radius: 10px;
     padding: 12px;
     margin: 16px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
   }
   
   .cardContent input {
@@ -134,3 +136,20 @@
       margin-left: 0px;
     }
   }
+
+.titlewrapper {
+    padding: 5px;
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 15px;
+    border: none;
+}
+
+.titleforpage{
+    position: absolute;
+    top: 0%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    right: 35.5px;
+}

@@ -7,6 +7,7 @@ import { FaMicrophone } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 import { Button, Text } from '@nextui-org/react';
 import { motion } from "framer-motion"
+import { style } from 'dom-helpers';
 // import html2canvas from 'html2canvas'
 
 export default function Home() {
@@ -96,30 +97,33 @@ export default function Home() {
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap" rel="stylesheet"></link>
         </Head>
         <main className={styles.main}>
-          <div className={styles.signedinas}>
-        {/* <Text
+        <div className={styles.titleforpage}>
+        <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
+          <Text
             h1
-            size={22}
+            size={50}
             css={{
-              textGradient: "45deg, $yellow600 -20%, $red600 100%",
+              textGradient: "45deg, $green600 10%, $yellow600 100%",
+            }}
+            weight="bold"
+          >Spotify DMs
+          </Text>
+        </motion.button>
+      </div>
+          {/* <div className={styles.signedinastext}>
+            <Text
+            h1
+            size={20}
+            css={{
+              textGradient: "45deg, $blue600 -20%, $pink600 50%",
             }}
             weight="bold"
           >
-            signed in as
+            signed
           </Text>
           <Text
             h1
-            size={22}
-            css={{
-              textGradient: "45deg, $yellow600 -20%, $red600 100%",
-            }}
-            weight="bold"
-          >
-            {session?.token?.email}
-          </Text> */}
-          {/* <Text
-            h1
-            size={25}
+            size={20}
             css={{
               textGradient: "45deg, $purple600 -20%, $pink600 100%",
             }}
@@ -129,60 +133,47 @@ export default function Home() {
           </Text>
           <Text
             h1
-            size={25}
+            size={20}
             css={{
               textGradient: "45deg, $yellow600 -20%, $red600 100%",
             }}
             weight="bold"
           >
-            {session?.token?.email}
-          </Text> */}
-          
-          <div style={{position: 'relative', top: 10, display: 'flex', flexDirection:'row', justifyContent: 'space-between', marginBottom: 50}}>
-          
-          <motion.button
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }}
-    style={{
-      backgroundColor: 'transparent',
-      padding: 0,
-      borderRadius: 15,
-      border: 'none'
-    }}
-  ><div style={{
-    marginRight: 15,
-    borderRadius: 15,
-    webkitBoxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
-boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
-  }}><Button color="warning" auto ghost onClick={() => signOut()}>Sign Out</Button></div></motion.button>
-          
-          <motion.button
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }}
-    style={{
-      backgroundColor: 'transparent',
-      padding: 0,
-      borderRadius: 15,
-      border: 'none'
-    }}>
-      <div style={{
-    borderRadius: 15,
-    webkitBoxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
-boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
-  }}>
-          <Button color="success" auto ghost onClick={() => getArtists()}>Check DMs</Button></div></motion.button>
-
-
-          </div>
-        
-        {/* {playlists.map((item) => (
-          <div key={item.id}>
-            <h1>{item.name}</h1>
-            <img src={item.images[0]?.url} width="100" />
-          </div>
-        ))} */}
-
-</div>
+            {session?.token.email}
+          </Text>
+                  {/* buttons (sign out + check dms) */}
+              {/* <div className={styles.buttonwrapper}>
+                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
+                  <div className={styles.buttonshadow}>
+                    <Button color="warning" auto ghost onClick={() => signOut()}>Sign Out</Button>
+                    </div>
+                </motion.button>
+                
+                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
+                  <div className={styles.buttonshadow}>
+                    <Button color="error" auto ghost onClick={() => getArtists()}>Check DMs</Button>
+                    </div>
+                </motion.button>
+              </div> */}
+        {/* </div> */} 
+          {/* subtitle with buttons */}
+          <div className={styles.signedinas}>
+            {/* buttons (sign out + check dms) */}
+              <div className={styles.buttonwrapper}>
+                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
+                  <div className={styles.buttonshadow}>
+                    <Button color="warning" auto ghost onClick={() => signOut()}>Sign Out</Button>
+                    </div>
+                </motion.button>
+                
+                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
+                  <div className={styles.buttonshadow}>
+                    <Button color="success" auto ghost onClick={() => getArtists()}>Check DMs</Button>
+                    </div>
+                </motion.button>
+              </div>
+           </div>
+        {/* text messages from top artists */}
         <div className={styles.phone} style={{display: phoneIsVisible ? 'flex' : 'none'}}>
           <div className={styles.messages}>Messages</div>
           <div className={styles.searchbar}>
@@ -268,7 +259,6 @@ boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
 
         </div>
 
-
           {/* {topArtists.map((x) => (
             <div key={x.name}>
               <h1>{(x.name)}</h1>
@@ -285,8 +275,23 @@ boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
   }
   return (
     <>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <div className={styles.titleforpage}>
+        <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
+          <Text
+            h1
+            size={50}
+            css={{
+              textGradient: "45deg, $green600 10%, $yellow600 100%",
+            }}
+            weight="bold"
+          >Spotify DMs
+          </Text>
+        </motion.button>
+      </div>
+      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
+        <button className={styles.signinbutton} onClick={() => signIn()}>sign in</button>
+        </motion.button>
+
     </>
   );
 }
