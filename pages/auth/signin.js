@@ -7,7 +7,6 @@ import { Button, Text } from '@nextui-org/react';
 const Signin = ({ csrfToken, providers }) => {
   return (
     <div style={{ overflow: 'hidden', position: 'relative' }}>
-      <div className={styles.wrapper} />
       <div className={styles.content}>
         <div className={styles.cardWrapper}>
           <Image src='/spotify.png' width="196px" height="196px" alt='App Logo' style={{ height: '85px', marginBottom: '20px' }} />
@@ -19,7 +18,7 @@ const Signin = ({ csrfToken, providers }) => {
                     backgroundColor:'transparent',
                     color: 'white',
                     border: 'none',
-                    fontSize: 27
+                    fontSize: 28
                     }} onClick={() =>
                       signIn(provider.id, {
                         callbackUrl: `${window.location.origin}/`,

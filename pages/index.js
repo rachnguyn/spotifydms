@@ -6,7 +6,8 @@ import { BiSearch } from 'react-icons/bi';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 import { Button, Text } from '@nextui-org/react';
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion"
+// import html2canvas from 'html2canvas'
 
 export default function Home() {
   const {data: session} = useSession();
@@ -94,19 +95,29 @@ export default function Home() {
         </Head>
         <main className={styles.main}>
           <div className={styles.signedinas}>
-        <Text
+        {/* <Text
             h1
-            size={30}
+            size={22}
             css={{
-              textGradient: "45deg, $blue600 -20%, $pink600 50%",
+              textGradient: "45deg, $yellow600 -20%, $red600 100%",
             }}
             weight="bold"
           >
-            Signed
+            signed in as
           </Text>
           <Text
             h1
-            size={30}
+            size={22}
+            css={{
+              textGradient: "45deg, $yellow600 -20%, $red600 100%",
+            }}
+            weight="bold"
+          >
+            {session?.token?.email}
+          </Text> */}
+          {/* <Text
+            h1
+            size={25}
             css={{
               textGradient: "45deg, $purple600 -20%, $pink600 100%",
             }}
@@ -116,17 +127,50 @@ export default function Home() {
           </Text>
           <Text
             h1
-            size={30}
+            size={25}
             css={{
               textGradient: "45deg, $yellow600 -20%, $red600 100%",
             }}
             weight="bold"
           >
             {session?.token?.email}
-          </Text>
+          </Text> */}
+          
           <div style={{position: 'relative', top: 10, display: 'flex', flexDirection:'row', justifyContent: 'space-between', marginBottom: 50}}>
-          <Button color="error" auto onClick={() => signOut()}>Sign Out</Button>
-          <Button color="gradient" auto onClick={() => getArtists()}>Check DMs</Button>
+          
+          <motion.button
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    style={{
+      backgroundColor: 'transparent',
+      padding: 0,
+      borderRadius: 15,
+      border: 'none'
+    }}
+  ><div style={{
+    marginRight: 15,
+    borderRadius: 15,
+    webkitBoxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
+boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
+  }}><Button color="error" auto onClick={() => signOut()}>Sign Out</Button></div></motion.button>
+          
+          <motion.button
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    style={{
+      backgroundColor: 'transparent',
+      padding: 0,
+      borderRadius: 15,
+      border: 'none'
+    }}>
+      <div style={{
+    borderRadius: 15,
+    webkitBoxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
+boxShadow: '0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0)',
+  }}>
+          <Button color="gradient" auto onClick={() => getArtists()}>Check DMs</Button></div></motion.button>
+
+
           </div>
         
         {/* {playlists.map((item) => (
@@ -137,7 +181,6 @@ export default function Home() {
         ))} */}
 
 </div>
-
         <div className={styles.phone} style={{display: phoneIsVisible ? 'flex' : 'none'}}>
           <div className={styles.messages}>Messages</div>
           <div className={styles.searchbar}>
@@ -147,7 +190,7 @@ export default function Home() {
           </div>
           <div className={styles.topartist}>
             <img className={styles.number1artist}src={topArtists[0]?.image}/>
-            <text style={{color: '#8c8c8c', position: 'relative', top: 23, fontSize: 13, fontWeight: 400, fontFamily: 'Roboto'}}>{topArtists[0]?.name}</text>
+            <text style={{color: '#8c8c8c',     textTransform: 'none', position: 'relative', top: 23, fontSize: 13, fontWeight: 400, fontFamily: 'Roboto'}}>{topArtists[0]?.name}</text>
           </div>
           <div className={styles.texts}>
               <div className={styles.artist}>
@@ -226,8 +269,8 @@ fontSize: 11, position: 'relative', left: 60, top: -75, fontWeight: 400, fontFam
                 </text>
               </div>
           </div>
-        </div>
 
+        </div>
 
 
           {/* {topArtists.map((x) => (
@@ -237,6 +280,10 @@ fontSize: 11, position: 'relative', left: 60, top: -75, fontWeight: 400, fontFam
           ))} */}
 
         </main>
+
+        <footer>
+          made by rachel nguyen
+        </footer>
       </>
     );
   }

@@ -6,9 +6,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     background-color: rgb(185, 252, 211);
-    background: url('/background2.gif') no-repeat center center fixed; 
+    background: url('/background3.gif') no-repeat center center fixed; 
     background-size: cover;
+  }
+
+  .titleforpage{
+      position: absolute;
+      top: 5%;
+      overflow: hidden;
+      text-align: center;
   }
 
   .container {
@@ -16,7 +24,7 @@
   }
   
 .phone {
-    margin-top: 170px;
+    margin-top: 60px;
     background-color: black;
     height: 570px;
     width: 280px;
@@ -26,7 +34,11 @@
     flex-direction: column;
     padding: 15px;
     transition: all 1s;
-
+    border: 1px solid rgb(31, 31, 31);
+    /* -webkit-box-shadow: -1px 3px 11px 1px rgba(0,0,0,0.65); 
+    box-shadow: -1px 3px 11px 1px rgba(0,0,0,0.65); */
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
 }
 
 .phone.close {
@@ -41,6 +53,8 @@
     top: 20px;
     background-color: #bbb;
     border-radius: 50%;
+    text-transform: none;
+
     display: inline-block;
 }
 
@@ -49,6 +63,8 @@
     position: relative;
     font-family: 'Roboto';
     font-weight: 300;
+    text-transform: none;
+
     font-size: 15px;
 }
 
@@ -75,6 +91,7 @@
 .texts {
     background-color: rgb(0, 0, 0);
     height: 360px;
+    text-transform: none;
     width: 250px;
     position: relative;
     top: 40px;
@@ -93,6 +110,8 @@
     color: white;
     display: grid;
     margin-left: 4px;
+    text-transform: none;
+
 }
 .artistimage {
     height: 45px;
@@ -158,7 +177,46 @@
 
 .signedinas{
     position: absolute;
-    left: 5%;
-    top: 40px;
+    top: 17%;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 0;
+}
 
+.appjs{
+    background-color: transparent;
+    display: flex;
+    text-transform: lowercase;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    flex: 0.1;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+}
+
+.appjs > button {
+    background-color:rgb(255, 255, 255);
+    border: 2px solid black;
+    display: flex;
+    width: 100%;
+    text-transform: lowercase;
+    opacity: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
 }

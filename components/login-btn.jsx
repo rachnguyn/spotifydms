@@ -17,10 +17,7 @@ export default function Buttons() {
   return (
     <>
       Not signed in <br />
-      <a href={`/auth/signin`}
-                     onClick={(e) => {
-                        e.preventDefault()
-                        signIn()}}>Sign in</a>
+      <a href={`/api/auth/signin`} onClick={(e) => signIn()}>Sign in</a>
     </>
   )
 }

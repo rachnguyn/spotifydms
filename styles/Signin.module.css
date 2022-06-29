@@ -31,20 +31,20 @@
   
   .cardWrapper {
     display: flex;
-    width: 400px;
+    width: 300px;
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    margin-left: 15%;
     font-size: 1.2rem;
     z-index: 3;
   }
   
   .cardContent {
     width: 100%;
-    background: rgb(0, 0, 0, 0.85);
+    border: 1.5px solid #1DB954;
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
-    padding: 16px;
+    padding: 12px;
     margin: 16px;
   }
   
