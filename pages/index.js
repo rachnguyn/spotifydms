@@ -6,7 +6,7 @@ import { BiSearch } from 'react-icons/bi';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 import { Button, Text } from '@nextui-org/react';
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 
 export default function Home() {
   const {data: session} = useSession();
@@ -55,16 +55,19 @@ export default function Home() {
     'Call me back ASAP, I need ur advice',
     'Thanks again for saving my life 🥹',
     'Are you coming to my birthday party? I got u a gift',
-    'Will you be in my music video?',
+    'Will you pls be in my music video?',
     "I'm glad my kidney was a match",
     "What's for dinner? 🤭", 
     "Make sure to bring a jacket 🥶",
     "U up?",
     "Yo, u comin' to the afterparty?",
-    "U made HOW MUCH last year??",
+    "U made HOW MUCH last year?!",
     "R u ignoring me?",
     "Great minds think alike 🤝",
-    "Me. You. Paris. This Friday?"
+    "Me. You. Paris. This Friday?",
+    "CONGRATS 🎉 on the Nobel!",
+    "Your new book... it was SO good",
+    "Wyd, " + profile.display_name + "?",
   ]
 
   const randomTextsNoRepeats = (array) => {
