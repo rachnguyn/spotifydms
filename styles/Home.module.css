@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: rgb(185, 252, 211);
+    background-color: rgb(0, 0, 0);
     background: url('/background3.gif') no-repeat center center fixed; 
     background-size: cover;
   }
@@ -25,7 +25,7 @@
   }
   
 .phone {
-    margin-top: 90px;
+    margin-top: 120px;
     background-color: black;
     height: 570px;
     width: 280px;

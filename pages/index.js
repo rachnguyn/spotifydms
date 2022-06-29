@@ -6,6 +6,7 @@ import { BiSearch } from 'react-icons/bi';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 import { RiEditBoxLine } from 'react-icons/ri';
+import Typewriter from 'typewriter-effect';
 
 import { Button, Text } from '@nextui-org/react';
 import { motion } from "framer-motion"
@@ -279,7 +280,7 @@ export default function Home() {
         </main>
 
         <footer>
-          made by rachel nguyen
+          by rachel nguyen
         </footer>
       </>
     );
@@ -300,8 +301,19 @@ export default function Home() {
         </motion.button>
       </div>
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
-        <button className={styles.signinbutton} onClick={() => signIn()}>Check Messages
-        <div className={styles.arrow2}><IoIosArrowForward/></div>
+        <button className={styles.signinbutton} onClick={() => signIn()}>
+        <Typewriter
+        onInit={(typewriter) => {
+          typewriter.typeString('check messages')
+            .callFunction(() => {
+            })
+            .pauseFor(2500)
+            .callFunction(() => {
+            })
+            .start();
+        }}>
+        </Typewriter>
+        {/* <div className={styles.arrow2}><IoIosArrowForward/></div> */}
         </button>
         </motion.button>
 
