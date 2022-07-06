@@ -69,13 +69,30 @@ export default function Home() {
     "U made HOW MUCH last year?!",
     "R u ignoring me?",
     "Great minds think alike 🤝",
-    "Me. You. Paris. This Friday?",
+    "Me. You. Paris. This Friday? 👉👈",
     "CONGRATS 🎉 on the Nobel!",
-    "Your new book... it was SO good",
+    "Your book on quantum physics... it was so good",
     "Wyd, " + profile.display_name + "?",
     "Snap?",
     "Sorry... U were right",
-    "LOL u crack me up"
+    "LOL " + profile.display_name + " u crack me up",
+    "See u tmrw bestie",
+    "Here",
+    "Cup Pong",
+    "..lowkey my latest single was about u",
+    "I wanna write a song about us",
+    "Your name's on the guest list",
+    "Meet me backstage",
+    "Studio at 6. Bring ur own cymbals",
+    "Just saw your Ted Talk, it was incredible",
+    "Ur dropbox got storage? Got a few demos to send",
+    "U want anything from 7/11?",
+    "Blue or red gatorade? Hurry",
+    "Who's ur #1 on Spotify Wrapped 🧐",
+    "One more ignored text and u get nosebleed seats 😡",
+    "Going to sbux. Want the usual?",
+    "I'll send a car 4 u",
+    "Heard ur restaurant got its third Michelin. Congrats!"
   ]
 
   const randomTextsNoRepeats = (array) => {
