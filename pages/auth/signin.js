@@ -10,13 +10,13 @@ const Signin = ({ csrfToken, providers }) => {
   return (
     <main>
       {/* title */}
-      <div className={styles2.titleforpage} style={{position: 'relative', top: 5}}>
+      <div className={styles2.titleforpage} style={{position: 'relative', top: 32}}>
         <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.9 }} className={styles2.titlewrapper}>
           <Text
             h1
             size={50}
             css={{
-              textGradient: "25deg, #00ff5e 0%, #ffd000 90%",
+              textGradient: "25deg, #28f75c 0%, #ffd000 90%",
             }}
             weight="bold"
           >Spotify DMs

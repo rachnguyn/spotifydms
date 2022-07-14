@@ -128,7 +128,7 @@ export default function Home() {
             h1
             size={50}
             css={{
-              textGradient: "25deg, #00ff5e 0%, #ffd000 90%",
+              textGradient: "25deg, #28f75c 0%, #ffd000 90%",
             }}
             weight="bold"
           >Spotify DMs
@@ -208,7 +208,7 @@ export default function Home() {
           <div className={styles.searchbar}>
             <div style={{position: 'relative', top: 2, left: -4}}><BiSearch/></div>
             Search
-            <div style={{position: 'relative', top: 2, right: -157}}><FaMicrophone/></div>
+            <div style={{position: 'relative', top: 2, right: -170}}><FaMicrophone/></div>
           </div>
           <div className={styles.topartist}>
             <img className={styles.number1artist}src={topArtists[0]?.image}/>
