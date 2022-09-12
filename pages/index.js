@@ -37,6 +37,7 @@ export default function Home() {
   const getArtists = async () => {
     const res = await fetch('/api/top/artists');
     const {artists} = await res.json();
+    console.log(artists);
     setTopArtists(artists);
 
     const res2 = await fetch('/api/profile');
@@ -70,11 +71,12 @@ export default function Home() {
     "R u ignoring me?",
     "Great minds think alike 🤝",
     "Me. You. Paris. This Friday? 👉👈",
-    "CONGRATS 🎉 on the Nobel!",
+    "CONGRATS 🎉 on the Grammy!",
     "Your book on quantum physics... it was so good",
     "Wyd, " + profile.display_name + "?",
     "Snap?",
-    "Sorry... U were right",
+    "Hey thx for producing my last album",
+    "Wanna feature?",
     "LOL " + profile.display_name + " u crack me up",
     "See u tmrw bestie",
     "Here",
@@ -122,7 +124,7 @@ export default function Home() {
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap" rel="stylesheet"></link>
         </Head>
         <main className={styles.main}>
-        <div className={styles.titleforpage}>
+        {/* <div className={styles.titleforpage}>
         <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
           <Text
             h1
@@ -134,7 +136,7 @@ export default function Home() {
           >Spotify DMs
           </Text>
         </motion.button>
-      </div>
+      </div> */}
           {/* <div className={styles.signedinastext}>
             <Text
             h1
@@ -225,6 +227,7 @@ export default function Home() {
                    <span className={styles.time}>7:{(topArtists[1]?.popularity)%60 < 10 ? '0' + (topArtists[1]?.popularity)%60 : (topArtists[1]?.popularity)%60} PM</span>
                 </div>
                 <div className={styles.txtmsg}>{chooseText()}</div>
+                
                 <div className={styles.line} style={{top: 8}}></div>
 
               </div>
@@ -304,7 +307,7 @@ export default function Home() {
   }
   return (
     <>
-      <div className={styles.titleforpage}>
+      {/* <div className={styles.titleforpage}>
         <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
           <Text
             h1
@@ -316,7 +319,7 @@ export default function Home() {
           >Spotify DMs
           </Text>
         </motion.button>
-      </div>
+      </div> */}
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
         <button className={styles.signinbutton} onClick={() => signIn()}>
         <Typewriter

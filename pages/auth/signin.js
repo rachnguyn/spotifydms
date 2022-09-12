@@ -4,13 +4,13 @@ import Header from '../../components/header'
 import styles from '../../styles/Signin.module.css'
 import { Button, Text } from '@nextui-org/react';
 import { motion } from "framer-motion"
-import styles2 from '../../styles/home.module.css'
+import styles2 from '../../styles/Home.module.css'
 
 const Signin = ({ csrfToken, providers }) => {
   return (
     <main>
-      {/* title */}
-      <div className={styles2.titleforpage} style={{position: 'relative', top: 32}}>
+      {/* title
+      <div className={styles2.titleforpage} style={{position: 'relative', top: 32, left: 0}}>
         <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.9 }} className={styles2.titlewrapper}>
           <Text
             h1
@@ -22,7 +22,7 @@ const Signin = ({ csrfToken, providers }) => {
           >Spotify DMs
           </Text>
         </motion.button>
-      </div>
+      </div> */}
 
     <div style={{ overflow: 'hidden', position: 'relative' }}>
       <div className={styles.content} style={{position: 'relative', top: -30}}>

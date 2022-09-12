@@ -14,7 +14,7 @@
 
   .titleforpage{
       position: absolute;
-      top: 13.8%;
+      top: 16%;
       overflow: hidden;
       text-align: center;
       padding: 5px;
@@ -262,7 +262,7 @@ box-shadow: 0px 10px 13px -7px #000000, -1px 3px 11px 1px rgba(0,0,0,0);
 }
 .buttonwrapper {
     position: relative;
-    top: 10px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
