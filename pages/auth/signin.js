@@ -45,7 +45,8 @@ const Signin = ({ csrfToken, providers }) => {
                     backgroundColor:'transparent',
                     color: 'white',
                     border: 'none',
-                    fontSize: 28
+                    fontFamily:'DM Mono',
+                    fontSize: 20
                     }} onClick={() =>
                       signIn(provider.id, {
                         callbackUrl: `${window.location.origin}/`,

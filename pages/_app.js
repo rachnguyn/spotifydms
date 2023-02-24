@@ -16,24 +16,18 @@ export default function App({Component, pageProps: {session, ...pageProps}}) {
   return (
       <>
     <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap" rel="stylesheet"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" cross0rigin/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Didact+Gothic&family=Inter:wght@200;300;400;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;1,100&family=Open+Sans:wght@300&family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Zen+Maru+Gothic:wght@300;400&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
         </Head>
         
     <main className={styles.main}>
       {/* title */}
       <div className={styles.titleforpage}>
         <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
-          <Text
-            h1
-            size={50}
-            css={{
-              textGradient: "25deg, #28f75c 0%, #ffd000 90%",
-            }}
-            weight="bold"
+          <div style={{color:'white', fontFamily:'DM Mono', fontSize: 50,}}
           >Spotify DMs
-          </Text>
+          </div>
         </motion.button>
       </div>
         {/* <div className={styles.title}>Check your Spotify DMs</div> */}

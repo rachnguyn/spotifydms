@@ -119,9 +119,9 @@ export default function Home() {
     return (
       <>
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap" rel="stylesheet"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" cross0rigin/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Didact+Gothic&family=Inter:wght@200;300;400;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;1,100&family=Open+Sans:wght@300&family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Zen+Maru+Gothic:wght@300;400&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
         </Head>
         <main className={styles.main}>
         {/* <div className={styles.titleforpage}>
@@ -189,12 +189,12 @@ export default function Home() {
               <div className={styles.buttonwrapper}>
               <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
                   <div className={styles.buttonshadow}>
-                    <Button color="success" auto ghost onClick={() => getArtists()}>Refresh</Button>
+                    <Button style={{fontFamily:'DM Mono'}}color="primary" auto ghost onClick={() => getArtists()}>Refresh</Button>
                     </div>
                 </motion.button>
                 <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.buttons}>
                   <div className={styles.buttonshadow}>
-                    <Button color="warning" auto ghost onClick={() => signOut()}>Sign Out</Button>
+                    <Button style={{fontFamily:'DM Mono'}} color="secondary" auto ghost onClick={() => signOut()}>Sign Out</Button>
                     </div>
                 </motion.button>
               
@@ -299,7 +299,7 @@ export default function Home() {
 
         </main>
 
-        <footer>
+        <footer style={{fontFamily:'DM Mono'}}>
           by rachel nguyen
         </footer>
       </>
@@ -322,7 +322,7 @@ export default function Home() {
       </div> */}
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={styles.titlewrapper}>
         <button className={styles.signinbutton} onClick={() => signIn()}>
-        <Typewriter
+        <div style={{fontFamily:'DM Mono'}}><Typewriter
         onInit={(typewriter) => {
           typewriter.typeString('check messages')
             .callFunction(() => {
@@ -332,7 +332,7 @@ export default function Home() {
             })
             .start();
         }}>
-        </Typewriter>
+        </Typewriter></div>
         {/* <div className={styles.arrow2}><IoIosArrowForward/></div> */}
         </button>
         </motion.button>
